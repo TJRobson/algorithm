@@ -11,5 +11,15 @@ describe('diffTwoArrays', function() {
     assert.isTrue(Array.isArray(diffArray()))
   });
 
+  it('should return diffs', function() {
+
+    var arr1 = ["diorite", "andesite", "grass", "dirt", "pink wool", "dead shrub"],
+      arr2 = ["diorite", "andesite", "grass", "dirt", "dead shrub"],
+      result = diffArray(arr1, arr2),
+      expected = ["pink wool"];
+
+    assert.equal(expected, result);  
+
+  })
 
 });
