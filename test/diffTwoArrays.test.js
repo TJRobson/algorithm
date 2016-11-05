@@ -20,10 +20,19 @@ describe('diffTwoArrays', () => {
   });
 
   it('return diffs from both arrays : string', () => {
-    const arr1 = ['andesite', 'grass', 'dirt', 'pink wool', 'dead shrub'];
+    const arr1 = ['andesite', 'grass', 'dirt', 'pink wool', 'dead shrub', 'trail'];
     const arr2 = ['diorite', 'andesite', 'grass', 'dirt', 'dead shrub'];
     const result = diffArray(arr1, arr2);
-    const expected = ['diorite', 'pink wool'];
+    const expected = ['diorite', 'pink wool', 'trail'];
+
+    expect(result).to.deep.equal(expected);
+  });
+
+  it('return diffs from both arrays : string : changed argument order', () => {
+    const arr1 = ['diorite', 'andesite', 'grass', 'dirt', 'dead shrub'];
+    const arr2 = ['andesite', 'grass', 'dirt', 'pink wool', 'dead shrub', 'trail'];
+    const result = diffArray(arr1, arr2);
+    const expected = ['diorite', 'pink wool', 'trail'];
 
     expect(result).to.deep.equal(expected);
   });
@@ -55,9 +64,18 @@ describe('diffTwoArrays', () => {
     expect(result).to.deep.equal(expected);
   });
 
-  it('return diffs: one empty array', () => {
+  it('return diffs: first empty array', () => {
     const arr1 = [];
     const arr2 = ['snuffleupagus', 'cookie monster', 'elmo'];
+    const result = diffArray(arr1, arr2);
+    const expected = ['snuffleupagus', 'cookie monster', 'elmo'];
+
+    expect(result).to.deep.equal(expected);
+  });
+
+  it('return diffs: second empty array', () => {
+    const arr1 = ['snuffleupagus', 'cookie monster', 'elmo'];
+    const arr2 = [];
     const result = diffArray(arr1, arr2);
     const expected = ['snuffleupagus', 'cookie monster', 'elmo'];
 
