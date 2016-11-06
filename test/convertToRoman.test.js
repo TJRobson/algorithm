@@ -18,6 +18,14 @@ describe('convertToRoman function', () => {
     expect(convertToRoman(3)).to.equal('III');
   });
 
+  it('convertToRoman(4) should return "IV".', () => {
+    expect(convertToRoman(4)).to.equal('IV');
+  });
+
+  it('convertToRoman(5) should return "V".', () => {
+    expect(convertToRoman(5)).to.equal('V');
+  });
+
   it('convertToRoman(16) should return "XVI".', () => {
     expect(convertToRoman(16)).to.equal('XVI');
   });
