@@ -14,4 +14,4 @@ npm test
 ```
 
 ### Pass the tests
-It's your job.
+_This bit is up to you!_
