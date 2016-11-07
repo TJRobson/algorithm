@@ -27,6 +27,6 @@ describe('convertToRoman function', () => {
   it('should return [{ "a": 1, "b": 2, "c": 2 }]', () => {
     const actual = whatIsInAName([{ a: 1, b: 2 }, { a: 1 }, { a: 1, b: 2, c: 2 }], { a: 1, c: 2 });
 
-    expect(actual).to.be.deep.equal([{ a: 1, b: 2 }, { a: 1, b: 2, c: 2 }]);
+    expect(actual).to.be.deep.equal([{ a: 1, b: 2, c: 2 }]);
   });
 });
