@@ -1,11 +1,16 @@
 const seed = require('../seed/Intermediate-bonfires');
 
-const challenge = seed.challenges[0].challengeSeed;
+const challenge = seed.challenges[0];
 
-challenge[0] = `export default ${challenge[0]}`;
+challenge.challengeSeed[0] = `export default ${challenge.challengeSeed[0]}`;
 
-challenge.splice(challenge.length - 1, 1);
+challenge.challengeSeed.splice(challenge.challengeSeed.length - 1, 1);
 
-console.log(challenge.join('\n'));
+console.log(challenge.challengeSeed.join('\n'));
 
-console.log("assert.match(convertHTML(\"Dolce & Gabbana\"), /Dolce &amp; Gabbana/, 'message: <code>convertHTML(\"Dolce & Gabbana\")</code> should return <code>Dolce &&#8203;amp; Gabbana</code>.');");
+const th = `import { assert } from 'chai';\ndescribe('${challenge.title}', () => {`;
+
+const tests = challenge.tests;
+const testDesc = tests[0].split('message: ').pop().replace(/\'\);/g, '').replace(/<[\/]?code>/g, '');
+const ts = `  it('${testDesc}', () => {`;
+console.log([th, ts].join('\n'));
