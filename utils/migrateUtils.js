@@ -10,7 +10,7 @@ function getFuncString(challengeSeedFunc) {
 
   challengeSeedFunc.splice(challengeSeedFunc.length - 1, 1);
 
-  return challengeSeedFunc.join('\n')
+  return challengeSeedFunc.join('\n');
 }
 
 function getFuncDirectory(funcName, level) {
@@ -19,7 +19,7 @@ function getFuncDirectory(funcName, level) {
 
 function createFile(directory, content) {
   const folder = path.dirname(directory);
-  if (!fs.existsSync(folder)){
+  if (!fs.existsSync(folder)) {
     fs.mkdirSync(folder);
   }
   fs.closeSync(fs.openSync(directory, 'w'));
@@ -37,12 +37,12 @@ function getStringOfTest(challenge, funcName) {
   const arr = [];
   const tests = challenge.tests;
 
-  const th = `import { assert } from 'chai';\nimport ${funcName} from '../src/${funcName}';\ndescribe('${challenge.title}', () => {\n`;
+  const th = `import { assert } from 'chai';\nimport ${funcName} from '../src/${funcName}.js';\n\ndescribe('${challenge.title}', () => {\n`;
   arr.push(th);
 
-  tests.forEach(function(test) {
-      const testDesc = getTestDesc(test);
-      arr.push(`  it('${testDesc}', () => {\n    ${test}\n  });\n`);
+  tests.forEach((test) => {
+    const testDesc = getTestDesc(test);
+    arr.push(`  it('${testDesc}', () => {\n    ${test}\n  });\n`);
   });
 
   arr.push('});\n');
@@ -55,11 +55,11 @@ function getDirectoryOfTest(funcName, level) {
 }
 
 function migrate(challenges, level) {
-  challenges.forEach(function(challenge) {
+  challenges.forEach((challenge) => {
     const challengeSeedFunc = challenge.challengeSeed;
-    const funcName = getFuncName(challengeSeedFunc)
+    const funcName = getFuncName(challengeSeedFunc);
     const funcDirectory = getFuncDirectory(funcName, level);
-    const funcString = getFuncString(challengeSeedFunc)
+    const funcString = getFuncString(challengeSeedFunc);
 
     createFile(funcDirectory, funcString);
 
