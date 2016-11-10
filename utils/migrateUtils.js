@@ -53,11 +53,21 @@ function getStringOfTest(challenge, funcName) {
 function getDirectoryOfTest(funcName, level) {
   return `${__dirname}/../test/${level}/${funcName}.test.js`;
 }
-module.exports = {
-  getFuncName,
-  getFuncString,
-  getFuncDirectory,
-  createFile,
-  getStringOfTest,
-  getDirectoryOfTest
+
+function migrate(challenges, level) {
+  challenges.forEach(function(challenge) {
+    const challengeSeedFunc = challenge.challengeSeed;
+    const funcName = getFuncName(challengeSeedFunc)
+    const funcDirectory = getFuncDirectory(funcName, level);
+    const funcString = getFuncString(challengeSeedFunc)
+
+    createFile(funcDirectory, funcString);
+
+    const stringOfTest = getStringOfTest(challenge, funcName);
+    const directoryOfTest = getDirectoryOfTest(funcName, level);
+
+    createFile(directoryOfTest, stringOfTest);
+  });
 }
+
+module.exports = migrate;
