@@ -9,15 +9,16 @@ const createFile = migrateUtils.createFile;
 const getStringOfTest = migrateUtils.getStringOfTest;
 const getDirectoryOfTest = migrateUtils.getDirectoryOfTest;
 
-const challenge = seed.challenges[0];
-const challengeSeedFunc = seed.challenges[0].challengeSeed;
-const funcName = getFuncName(challengeSeedFunc)
-const funcDirectory = getFuncDirectory(funcName);
-const funcString = getFuncString(challengeSeedFunc)
+seed.challenges.forEach(function(challenge) {
+  const challengeSeedFunc = challenge.challengeSeed;
+  const funcName = getFuncName(challengeSeedFunc)
+  const funcDirectory = getFuncDirectory(funcName);
+  const funcString = getFuncString(challengeSeedFunc)
 
-createFile(funcDirectory, funcString);
+  createFile(funcDirectory, funcString);
 
-const stringOfTest = getStringOfTest(challenge, funcName);
-const directoryOfTest = getDirectoryOfTest(funcName);
+  const stringOfTest = getStringOfTest(challenge, funcName);
+  const directoryOfTest = getDirectoryOfTest(funcName);
 
-createFile(directoryOfTest, stringOfTest);
+  createFile(directoryOfTest, stringOfTest);
+});
