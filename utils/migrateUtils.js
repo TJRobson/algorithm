@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 
 function getFuncName(challengeSeedFunc) {
   return challengeSeedFunc[0].slice(challengeSeedFunc[0].indexOf(' ') + 1, challengeSeedFunc[0].indexOf('('));
@@ -12,11 +13,15 @@ function getFuncString(challengeSeedFunc) {
   return challengeSeedFunc.join('\n')
 }
 
-function getFuncDirectory(funcName) {
-  return `${__dirname}/../src/${funcName}.js`;
+function getFuncDirectory(funcName, level) {
+  return `${__dirname}/../src/${level}/${funcName}.js`;
 }
 
 function createFile(directory, content) {
+  const folder = path.dirname(directory);
+  if (!fs.existsSync(folder)){
+    fs.mkdirSync(folder);
+  }
   fs.closeSync(fs.openSync(directory, 'w'));
   fs.writeFile(directory, content, 'utf8', (err) => {
     if (err) throw err;
@@ -45,8 +50,8 @@ function getStringOfTest(challenge, funcName) {
   return arr.join('');
 }
 
-function getDirectoryOfTest(funcName) {
-  return `${__dirname}/../test/${funcName}.test.js`;
+function getDirectoryOfTest(funcName, level) {
+  return `${__dirname}/../test/${level}/${funcName}.test.js`;
 }
 module.exports = {
   getFuncName,
