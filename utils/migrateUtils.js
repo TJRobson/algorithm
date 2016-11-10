@@ -24,17 +24,25 @@ function createFile(directory, content) {
   });
 }
 
+function getTestDesc(test) {
+  return test.split('message: ').pop().replace(/\'\);/g, '').replace(/<[\/]?code>/g, '');
+}
+
 function getStringOfTest(challenge, funcName) {
+  const arr = [];
   const tests = challenge.tests;
-  const testDesc = tests[0].split('message: ').pop().replace(/\'\);/g, '').replace(/<[\/]?code>/g, '');
 
-  const th = `import { assert } from 'chai';\nimport ${funcName} from '../src/${funcName}';\ndescribe('${challenge.title}', () => {`;
-  const ts = `  it('${testDesc}', () => {`;
-  const t = `    ${tests[0]}`
-  const tsc = `  });`
-  const thc = '});\n';
+  const th = `import { assert } from 'chai';\nimport ${funcName} from '../src/${funcName}';\ndescribe('${challenge.title}', () => {\n`;
+  arr.push(th);
 
-  return [th, ts, t, tsc, thc].join('\n');
+  tests.forEach(function(test) {
+      const testDesc = getTestDesc(test);
+      arr.push(`  it('${testDesc}', () => {\n    ${test}\n  });\n`);
+  });
+
+  arr.push('});\n');
+
+  return arr.join('');
 }
 
 function getDirectoryOfTest(funcName) {
