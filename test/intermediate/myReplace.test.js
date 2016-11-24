@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import myReplace from '../src/myReplace.js';
+import myReplace from '../../src/intermediate/myReplace.js';
 
 describe('Search and Replace', () => {
   it('myReplace("Let us go to the store", "store", "mall") should return "Let us go to the mall".', () => {

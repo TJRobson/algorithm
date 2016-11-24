@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import permAlone from '../src/permAlone.js';
+import permAlone from '../../src/advanced/permAlone.js';
 
 describe('No repeats please', () => {
   it('permAlone("aab") should return a number.', () => {

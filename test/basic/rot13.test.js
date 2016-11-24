@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import rot13 from '../src/rot13.js';
+import rot13 from '../../src/basic/rot13.js';
 
 describe('Caesars Cipher', () => {
   it('rot13("SERR PBQR PNZC") should decode to FREE CODE CAMP', () => {

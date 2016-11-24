@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import smallestCommons from '../src/smallestCommons.js';
+import smallestCommons from '../../src/intermediate/smallestCommons.js';
 
 describe('Smallest Common Multiple', () => {
   it('smallestCommons([1, 5]) should return a number.', () => {

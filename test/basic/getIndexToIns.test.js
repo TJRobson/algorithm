@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import getIndexToIns from '../src/getIndexToIns.js';
+import getIndexToIns from '../../src/basic/getIndexToIns.js';
 
 describe('Where do I belong', () => {
   it('getIndexToIns([10, 20, 30, 40, 50], 35) should return 3.', () => {

@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import findLongestWord from '../src/findLongestWord.js';
+import findLongestWord from '../../src/basic/findLongestWord.js';
 
 describe('Find the Longest Word in a String', () => {
   it('findLongestWord("The quick brown fox jumped over the lazy dog") should return a number.', () => {

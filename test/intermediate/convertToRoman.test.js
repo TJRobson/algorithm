@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import convertToRoman from '../src/convertToRoman.js';
+import convertToRoman from '../../src/intermediate/convertToRoman.js';
 
 describe('Roman Numeral Converter', () => {
   it('convertToRoman(2) should return "II".', () => {

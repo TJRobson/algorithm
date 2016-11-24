@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import makeFriendlyDates from '../src/makeFriendlyDates.js';
+import makeFriendlyDates from '../../src/advanced/makeFriendlyDates.js';
 
 describe('Friendly Date Ranges', () => {
   it('makeFriendlyDates(["2016-07-01", "2016-07-04"]) should return ["July 1st","4th"].', () => {

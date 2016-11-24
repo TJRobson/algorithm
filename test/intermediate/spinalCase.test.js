@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import spinalCase from '../src/spinalCase.js';
+import spinalCase from '../../src/intermediate/spinalCase.js';
 
 describe('Spinal Tap Case', () => {
   it('spinalCase("This Is Spinal Tap") should return "this-is-spinal-tap".', () => {

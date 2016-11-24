@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import palindrome from '../src/palindrome.js';
+import palindrome from '../../src/basic/palindrome.js';
 
 describe('Check for Palindromes', () => {
   it('palindrome("eye") should return a boolean.', () => {

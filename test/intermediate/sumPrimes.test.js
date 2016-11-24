@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import sumPrimes from '../src/sumPrimes.js';
+import sumPrimes from '../../src/intermediate/sumPrimes.js';
 
 describe('Sum All Primes', () => {
   it('sumPrimes(10) should return a number.', () => {

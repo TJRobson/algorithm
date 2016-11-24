@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import mutation from '../src/mutation.js';
+import mutation from '../../src/basic/mutation.js';
 
 describe('Mutations', () => {
   it('mutation(["hello", "hey"]) should return false.', () => {

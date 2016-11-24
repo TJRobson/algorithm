@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import diffArray from '../src/diffArray.js';
+import diffArray from '../../src/intermediate/diffArray.js';
 
 describe('Diff Two Arrays', () => {
   it('diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]) should return an array.', () => {

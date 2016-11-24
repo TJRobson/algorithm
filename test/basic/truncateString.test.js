@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import truncateString from '../src/truncateString.js';
+import truncateString from '../../src/basic/truncateString.js';
 
 describe('Truncate a string', () => {
   it('truncateString("A-tisket a-tasket A green and yellow basket", 11) should return "A-tisket...".', () => {

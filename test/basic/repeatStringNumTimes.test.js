@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import repeatStringNumTimes from '../src/repeatStringNumTimes.js';
+import repeatStringNumTimes from '../../src/basic/repeatStringNumTimes.js';
 
 describe('Repeat a string repeat a string', () => {
   it('repeatStringNumTimes("*", 3) should return "***".', () => {

@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import pairwise from '../src/pairwise.js';
+import pairwise from '../../src/advanced/pairwise.js';
 
 describe('Pairwise', () => {
   it('pairwise([1, 4, 2, 3, 0, 5], 7) should return 11.', () => {

@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import sumFibs from '../src/sumFibs.js';
+import sumFibs from '../../src/intermediate/sumFibs.js';
 
 describe('Sum All Odd Fibonacci Numbers', () => {
   it('sumFibs(1) should return a number.', () => {

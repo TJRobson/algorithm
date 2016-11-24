@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import translatePigLatin from '../src/translatePigLatin.js';
+import translatePigLatin from '../../src/intermediate/translatePigLatin.js';
 
 describe('Pig Latin', () => {
   it('translatePigLatin("california") should return "aliforniacay".', () => {

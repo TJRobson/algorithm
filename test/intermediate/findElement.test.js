@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import findElement from '../src/findElement.js';
+import findElement from '../../src/intermediate/findElement.js';
 
 describe('Finders Keepers', () => {
   it('findElement([1, 3, 5, 8, 9, 10], function(num) { return num % 2 === 0; }) should return 8.', () => {

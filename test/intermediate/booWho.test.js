@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import booWho from '../src/booWho.js';
+import booWho from '../../src/intermediate/booWho.js';
 
 describe('Boo who', () => {
   it('booWho(true) should return true.', () => {

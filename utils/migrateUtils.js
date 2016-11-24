@@ -33,11 +33,11 @@ function getTestDesc(test) {
   return test.split('message: ').pop().replace(/\'\);/g, '').replace(/<[\/]?code>/g, '');
 }
 
-function getStringOfTest(challenge, funcName) {
+function getStringOfTest(challenge, level, funcName) {
   const arr = [];
   const tests = challenge.tests;
 
-  const th = `import { assert } from 'chai';\nimport ${funcName} from '../src/${funcName}.js';\n\ndescribe('${challenge.title}', () => {\n`;
+  const th = `import { assert } from 'chai';\nimport ${funcName} from '../../src/${level}/${funcName}.js';\n\ndescribe('${challenge.title}', () => {\n`;
   arr.push(th);
 
   tests.forEach((test) => {
@@ -63,7 +63,7 @@ function migrate(challenges, level) {
 
     createFile(funcDirectory, funcString);
 
-    const stringOfTest = getStringOfTest(challenge, funcName);
+    const stringOfTest = getStringOfTest(challenge, level, funcName);
     const directoryOfTest = getDirectoryOfTest(funcName, level);
 
     createFile(directoryOfTest, stringOfTest);

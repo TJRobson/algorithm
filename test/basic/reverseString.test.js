@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import reverseString from '../src/reverseString.js';
+import reverseString from '../../src/basic/reverseString.js';
 
 describe('Reverse a String', () => {
   it('reverseString("hello") should return a string.', () => {

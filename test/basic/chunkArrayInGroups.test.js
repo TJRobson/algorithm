@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import chunkArrayInGroups from '../src/chunkArrayInGroups.js';
+import chunkArrayInGroups from '../../src/basic/chunkArrayInGroups.js';
 
 describe('Chunky Monkey', () => {
   it('chunkArrayInGroups(["a", "b", "c", "d"], 2) should return [["a", "b"], ["c", "d"]].', () => {

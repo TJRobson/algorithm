@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import frankenSplice from '../src/frankenSplice.js';
+import frankenSplice from '../../src/basic/frankenSplice.js';
 
 describe('Slice and Splice', () => {
   it('frankenSplice([1, 2, 3], [4, 5], 1) should return [4, 1, 2, 3, 5].', () => {

@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import factorialize from '../src/factorialize.js';
+import factorialize from '../../src/basic/factorialize.js';
 
 describe('Factorialize a Number', () => {
   it('factorialize(5) should return a number.', () => {

@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import confirmEnding from '../src/confirmEnding.js';
+import confirmEnding from '../../src/basic/confirmEnding.js';
 
 describe('Confirm the Ending', () => {
   it('confirmEnding("Bastian", "n") should return true.', () => {

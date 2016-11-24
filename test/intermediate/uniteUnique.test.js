@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import uniteUnique from '../src/uniteUnique.js';
+import uniteUnique from '../../src/intermediate/uniteUnique.js';
 
 describe('Sorted Union', () => {
   it('uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]) should return [1, 3, 2, 5, 4].', () => {

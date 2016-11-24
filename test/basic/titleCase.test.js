@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import titleCase from '../src/titleCase.js';
+import titleCase from '../../src/basic/titleCase.js';
 
 describe('Title Case a Sentence', () => {
   it('titleCase("I&#39;m a little tea pot") should return a string.', () => {

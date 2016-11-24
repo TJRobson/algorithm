@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import steamrollArray from '../src/steamrollArray.js';
+import steamrollArray from '../../src/intermediate/steamrollArray.js';
 
 describe('Steamroller', () => {
   it('steamrollArray([[["a"]], [["b"]]]) should return ["a", "b"].', () => {

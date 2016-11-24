@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import dropElements from '../src/dropElements.js';
+import dropElements from '../../src/intermediate/dropElements.js';
 
 describe('Drop it', () => {
   it('dropElements([1, 2, 3, 4], function(n) {return n >= 3;}) should return [3, 4].', () => {

@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import updateInventory from '../src/updateInventory.js';
+import updateInventory from '../../src/advanced/updateInventory.js';
 
 describe('Inventory Update', () => {
   it('The function updateInventory should return an array.', () => {

@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import destroyer from '../src/destroyer.js';
+import destroyer from '../../src/basic/destroyer.js';
 
 describe('Seek and Destroy', () => {
   it('destroyer([1, 2, 3, 1, 2, 3], 2, 3) should return [1, 1].', () => {

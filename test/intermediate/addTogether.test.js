@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import addTogether from '../src/addTogether.js';
+import addTogether from '../../src/intermediate/addTogether.js';
 
 describe('Arguments Optional', () => {
   it('addTogether(2, 3) should return 5.', () => {

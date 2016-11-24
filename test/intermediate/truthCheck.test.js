@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import truthCheck from '../src/truthCheck.js';
+import truthCheck from '../../src/intermediate/truthCheck.js';
 
 describe('Everything Be True', () => {
   it('truthCheck([{"user": "Tinky-Winky", "sex": "male"}, {"user": "Dipsy", "sex": "male"}, {"user": "Laa-Laa", "sex": "female"}, {"user": "Po", "sex": "female"}], "sex") should return true.', () => {

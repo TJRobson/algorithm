@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import sym from '../src/sym.js';
+import sym from '../../src/advanced/sym.js';
 
 describe('Symmetric Difference', () => {
   it('sym([1, 2, 3], [5, 2, 1, 4]) should return [3, 4, 5].', () => {

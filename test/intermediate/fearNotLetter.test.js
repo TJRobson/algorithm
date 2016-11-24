@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import fearNotLetter from '../src/fearNotLetter.js';
+import fearNotLetter from '../../src/intermediate/fearNotLetter.js';
 
 describe('Missing letters', () => {
   it('fearNotLetter("abce") should return "d".', () => {

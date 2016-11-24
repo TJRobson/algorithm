@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import telephoneCheck from '../src/telephoneCheck.js';
+import telephoneCheck from '../../src/advanced/telephoneCheck.js';
 
 describe('Validate US Telephone Numbers', () => {
   it('telephoneCheck("555-555-5555") should return a boolean.', () => {

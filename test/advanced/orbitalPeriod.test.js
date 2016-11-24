@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import orbitalPeriod from '../src/orbitalPeriod.js';
+import orbitalPeriod from '../../src/advanced/orbitalPeriod.js';
 
 describe('Map the Debris', () => {
   it('orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]) should return [{name: "sputnik", orbitalPeriod: 86400}].', () => {

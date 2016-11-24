@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import whatIsInAName from '../src/whatIsInAName.js';
+import whatIsInAName from '../../src/intermediate/whatIsInAName.js';
 
 describe('Wherefore art thou', () => {
   it('whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }) should return [{ first: "Tybalt", last: "Capulet" }].', () => {

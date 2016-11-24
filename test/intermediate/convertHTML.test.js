@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import convertHTML from '../src/convertHTML.js';
+import convertHTML from '../../src/intermediate/convertHTML.js';
 
 describe('Convert HTML Entities', () => {
   it('convertHTML("Dolce & Gabbana") should return Dolce &&#8203;amp; Gabbana.', () => {

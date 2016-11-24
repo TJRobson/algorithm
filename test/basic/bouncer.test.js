@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import bouncer from '../src/bouncer.js';
+import bouncer from '../../src/basic/bouncer.js';
 
 describe('Falsy Bouncer', () => {
   it('bouncer([7, "ate", "", false, 9]) should return [7, "ate", 9].', () => {

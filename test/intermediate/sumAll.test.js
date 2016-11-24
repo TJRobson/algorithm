@@ -1,5 +1,5 @@
 import { assert } from 'chai';
-import sumAll from '../src/sumAll.js';
+import sumAll from '../../src/intermediate/sumAll.js';
 
 describe('Sum All Numbers in a Range', () => {
   it('sumAll([1, 4]) should return a number.', () => {
