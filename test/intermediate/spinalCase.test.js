@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 import spinalCase from '../../src/intermediate/spinalCase.js';
 
-describe('Spinal Tap Case', () => {
+describe.only('Spinal Tap Case', () => {
   it('spinalCase("This Is Spinal Tap") should return "this-is-spinal-tap".', () => {
     assert.deepEqual(spinalCase("This Is Spinal Tap"), "this-is-spinal-tap", 'message: <code>spinalCase("This Is Spinal Tap")</code> should return <code>"this-is-spinal-tap"</code>.');
   });

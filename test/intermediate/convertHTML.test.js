@@ -1,7 +1,7 @@
 import { assert } from 'chai';
 import convertHTML from '../../src/intermediate/convertHTML.js';
 
-describe.only('Convert HTML Entities', () => {
+describe('Convert HTML Entities', () => {
   it('convertHTML("Dolce & Gabbana") should return Dolce &&#8203;amp; Gabbana.', () => {
     assert.match(convertHTML("Dolce & Gabbana"), /Dolce &amp; Gabbana/, 'message: <code>convertHTML("Dolce & Gabbana")</code> should return <code>Dolce &&#8203;amp; Gabbana</code>.');
   });
