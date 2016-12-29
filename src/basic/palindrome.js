@@ -1,6 +1,9 @@
 export default function palindrome(str) {
-  // Good luck!
-  return true;
+  var newStr = str.replace(/[^a-z0-9]/gi,'').toLowerCase()
+  var reverseStr = newStr.split('').reverse().join('')
+
+  return newStr === reverseStr ? true: false
+
 }
 
-
+palindrome("eye")
